@@ -1,31 +1,75 @@
-# 🌴 AgriGuard AI - Areca Plant Disease Detection
+# 🌴 AgriGuard AI
 
-An AI-powered web application for detecting diseases in areca plants using Deep Learning and Flask. Farmers can upload an image of an areca plant, and the system predicts the disease with a confidence score, providing a foundation for smart agricultural decision-making.
+> AI-Powered Areca Plant Disease Detection and Agricultural Advisory System
 
----
-
-## 📌 Features
-
-- 🌿 Areca plant disease detection using Deep Learning
-- 📷 Upload plant images through a web interface
-- 🤖 TensorFlow/Keras prediction model
-- 📊 Displays prediction confidence
-- 🔒 Secure image upload handling
-- 🖥️ Flask-based web application
-- 📱 Responsive design (Upcoming)
-- 📄 PDF report generation (Upcoming)
-- 🌦️ Weather integration (Upcoming)
-- 🔥 Explainable AI using Grad-CAM (Upcoming)
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Flask](https://img.shields.io/badge/Flask-3.x-black)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## 🖼️ Demo
+## 📌 Overview
 
-### Home Page
+AgriGuard AI is a deep learning–based web application that detects diseases in **Areca (Betel Nut) plants** using image classification.
 
-- Upload an image of an areca plant
-- Click **Predict**
-- View disease prediction and confidence score
+The application predicts the disease from an uploaded image and provides:
+
+- 🌿 Disease prediction
+- 📊 Prediction confidence
+- 🩺 Symptoms
+- 🌱 Organic treatment recommendations
+- 💊 Chemical treatment recommendations
+- 🛡 Prevention methods
+- 💡 Farmer tips
+
+This project aims to assist farmers with quick and accessible disease diagnosis.
+
+---
+
+## ✨ Features
+
+- AI-based disease detection
+- Modern responsive Flask web interface
+- Drag & Drop image upload
+- Image preview
+- Confidence score
+- Disease knowledge base (JSON)
+- Organic treatment suggestions
+- Chemical treatment suggestions
+- Prevention recommendations
+- Farmer advisory tips
+- Secure image upload
+- Unknown image handling
+
+---
+
+## 🧠 Diseases Supported
+
+| Disease |
+|----------|
+| Healthy Leaf |
+| Healthy Nut |
+| Healthy Trunk |
+| Healthy Foot |
+| Bud Borer |
+| Yellow Leaf Disease |
+| Stem Cracking |
+| Stem Bleeding |
+| Mahali (Koleroga) |
+
+---
+
+## 🛠 Tech Stack
+
+- Python
+- Flask
+- TensorFlow / Keras
+- NumPy
+- Pillow
+- HTML5
+- CSS3
+- JavaScript
 
 ---
 
@@ -35,86 +79,62 @@ An AI-powered web application for detecting diseases in areca plants using Deep 
 AgriGuard-AI/
 │
 ├── app.py
-├── train.py
-├── evaluate.py
 ├── requirements.txt
+├── README.md
 ├── .gitignore
+│
+├── data/
+│   └── disease_info.json
+│
+├── models/
+│   ├── plant_disease_model.keras
+│   ├── plant_disease_model.h5
+│   └── class_indices.json
+│
+├── static/
+│   ├── css/
+│   ├── js/
+│   ├── images/
+│   └── uploads/
 │
 ├── templates/
 │   └── index.html
 │
-├── static/
-│   └── uploads/
+├── train.py
+├── evaluate.py
 │
-├── models/                 # Not included in GitHub
-├── Datasets/               # Not included in GitHub
-│
-└── README.md
+└── Datasets/
 ```
-
----
-
-## 🧠 Deep Learning Model
-
-- Framework: TensorFlow / Keras
-- Architecture: MobileNetV2 (Transfer Learning)
-- Image Size: 224 × 224
-- Optimizer: Adam
-- Loss Function: Categorical Crossentropy
-
----
-
-## 🎯 Model Performance
-
-| Metric | Value |
-|---------|-------|
-| Test Accuracy | **97.61%** |
-| Framework | TensorFlow/Keras |
-| Language | Python |
-
----
-
-## 🛠️ Technologies Used
-
-- Python 3.10
-- Flask
-- TensorFlow
-- Keras
-- NumPy
-- Pillow
-- HTML5
-- CSS3
-- JavaScript
 
 ---
 
 ## 🚀 Installation
 
-### Clone the repository
+Clone the repository
 
 ```bash
 git clone https://github.com/manojtk900/AgriGurd-areca_plant_decease-detection_model.git
 ```
 
-Move into the project directory:
+Go to the project
 
 ```bash
 cd AgriGurd-areca_plant_decease-detection_model
 ```
 
-Install the required packages:
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the Flask application:
+Run the application
 
 ```bash
 python app.py
 ```
 
-Open your browser:
+Open
 
 ```
 http://127.0.0.1:5000
@@ -122,60 +142,73 @@ http://127.0.0.1:5000
 
 ---
 
-## 📷 Usage
+## 📊 Model Information
 
-1. Launch the application.
-2. Upload an areca plant image.
-3. Click **Predict**.
-4. View:
-   - Predicted disease
-   - Confidence score
-   - Uploaded image
+Model: CNN (TensorFlow / Keras)
+
+Input Size:
+
+```
+224 × 224 × 3
+```
+
+Prediction Classes:
+
+```
+9 Classes
+```
+
+Image Preprocessing:
+
+- RGB Conversion
+- Resize (224 × 224)
+- Pixel Normalization
+- Batch Dimension Expansion
 
 ---
 
-## 📁 Dataset
+## 🌿 Prediction Output
 
-The dataset is **not included** in this repository due to its size.
+The system displays
+
+- Disease Name
+- Confidence Score
+- Disease Status
+- Severity
+- Affected Part
+- Symptoms
+- Organic Treatment
+- Chemical Treatment
+- Prevention
+- Farmer Tips
 
 ---
 
-## 📦 Model Files
+## 📸 Screenshots
 
-The trained TensorFlow model is **not included** in this repository.
-
-Place the trained model inside the `models/` directory before running the application.
+Add screenshots here.
 
 Example:
 
 ```
-models/
-│
-├── plant_disease_model.keras
-├── plant_disease_model.h5
-└── class_indices.json
+screenshots/home.png
+screenshots/result.png
 ```
 
 ---
 
-## 🛣️ Future Enhancements
+## 🔮 Future Improvements
 
-- 🎨 Modern Glassmorphism UI
-- 📤 Drag-and-drop image upload
-- 📊 Circular confidence meter
-- 🌿 Disease description
-- ⚠️ Disease severity prediction
-- 💊 Organic treatment recommendation
-- 🧪 Chemical treatment recommendation
-- 🌦️ Weather API integration
-- 🔥 Grad-CAM visualization
-- 📄 Downloadable PDF reports
-- 🗃️ SQLite database
-- 📈 Prediction history
-- 👤 User authentication
-- 🛠️ Admin dashboard
-- ☁️ Cloud deployment
-- 📱 Mobile-responsive interface
+- SQLite prediction history
+- PDF report generation
+- Weather API integration
+- Grad-CAM explainable AI
+- Farmer dashboard
+- User authentication
+- Admin panel
+- Mobile optimization
+- REST API
+- Deployment on Render / Azure / AWS
 
 ---
 
@@ -183,12 +216,18 @@ models/
 
 **Manoj T K**
 
-Computer Science & Engineering Student
+Computer Science & Engineering
 
-GitHub: https://github.com/manojtk900
+GitHub
+
+https://github.com/manojtk900
 
 ---
 
-## 📜 License
+## 📄 License
 
-This project is developed for academic, research, and educational purposes.
+This project is licensed under the MIT License.
+
+---
+
+⭐ If you found this project useful, consider giving it a star on GitHub.
