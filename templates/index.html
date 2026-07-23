@@ -1,65 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Areca Disease Detection</title>
 
-    <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body{
-            font-family: Arial;
-            text-align:center;
-            background:#f0fff0;
-            margin-top:50px;
-        }
+    <title>AgriGuard AI</title>
 
-        .box{
-            width:450px;
-            margin:auto;
-            background:white;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px gray;
-        }
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 
-        img{
-            width:250px;
-            margin-top:20px;
-        }
-
-        button{
-            padding:10px 20px;
-            background:green;
-            color:white;
-            border:none;
-            border-radius:5px;
-            cursor:pointer;
-        }
-
-    </style>
+    <script defer
+            src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </head>
 
 <body>
 
-<div class="box">
+<div class="container">
 
-    <h1>🌴 Areca Plant Disease Detection</h1>
+    <div class="glass-card">
 
-    <form action="/predict" method="post" enctype="multipart/form-data">
+        <h1>🌴 AgriGuard AI</h1>
 
-        <input type="file" name="file" required>
-        <br><br>
+        <p class="subtitle">
+            AI Powered Areca Plant Disease Detection
+        </p>
 
-        <button type="submit">Predict</button>
+        {% if error %}
 
-    </form>
+        <div class="error">
+            {{ error }}
+        </div>
 
-  {% if prediction %}
-<h2>Disease: {{ prediction }}</h2>
-<h3>Confidence: {{ confidence }}%</h3>
+        {% endif %}
 
-<img src="{{ image_path }}" width="300">
+        <form action="/predict"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <div class="upload-area" id="drop-area">
+
+                <input
+                        type="file"
+                        id="fileInput"
+                        name="file"
+                        accept=".jpg,.jpeg,.png"
+                        hidden>
+
+                <label for="fileInput">
+
+                    <div class="upload-content">
+
+                        <h2>📤</h2>
+
+                        <h3>Drag & Drop Image</h3>
+
+                        <p>or Click to Browse</p>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+            <img id="preview"
+                 class="preview">
+
+            <button class="predict-btn">
+
+                🔍 Predict Disease
+
+            </button>
+
+        </form>
+
+       {% if prediction %}
+
+<div class="result-card">
+
+    <h2>🌿 {{ prediction }}</h2>
+
+    <div class="confidence">
+        Confidence
+        <span>{{ confidence }}%</span>
+    </div>
+
+    {% if info %}
+
+    <div class="info-grid">
+
+        <div class="info-box">
+            <h3>Status</h3>
+            <p>{{ info.status }}</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Severity</h3>
+            <p>{{ info.severity }}</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Affected Part</h3>
+            <p>{{ info.affected_part }}</p>
+        </div>
+
+    </div>
+
+    <div class="details">
+
+        <h3>🩺 Symptoms</h3>
+
+        <ul>
+            {% for item in info.symptoms %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>🌱 Organic Treatment</h3>
+
+        <ul>
+            {% for item in info.organic %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>💊 Chemical Treatment</h3>
+
+        <ul>
+            {% for item in info.chemical %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>🛡 Prevention</h3>
+
+        <ul>
+            {% for item in info.prevention %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>💡 Farmer Tips</h3>
+
+        <ul>
+            {% for item in info.tips %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    {% endif %}
+
+    <img src="{{ image_path }}"
+         class="result-image">
+
+</div>
+
 {% endif %}
+
+    </div>
+
 </div>
 
 </body>

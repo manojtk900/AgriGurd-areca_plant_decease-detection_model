@@ -1,0 +1,212 @@
+{
+  "Healthy_Leaf": {
+    "status": "Healthy",
+    "severity": "None",
+    "affected_part": "Leaf",
+    "symptoms": [
+      "Leaf appears green and healthy",
+      "No visible disease symptoms"
+    ],
+    "organic": [
+      "Maintain regular irrigation",
+      "Apply organic compost periodically"
+    ],
+    "chemical": [
+      "No chemical treatment required"
+    ],
+    "prevention": [
+      "Regular monitoring",
+      "Balanced fertilization"
+    ],
+    "tips": [
+      "Continue good agricultural practices"
+    ]
+  },
+
+  "Healthy_Nut": {
+    "status": "Healthy",
+    "severity": "None",
+    "affected_part": "Nut",
+    "symptoms": [
+      "Healthy nut development",
+      "No discoloration"
+    ],
+    "organic": [
+      "Maintain soil fertility"
+    ],
+    "chemical": [
+      "No treatment required"
+    ],
+    "prevention": [
+      "Maintain proper irrigation"
+    ],
+    "tips": [
+      "Monitor periodically"
+    ]
+  },
+
+  "Healthy_Trunk": {
+    "status": "Healthy",
+    "severity": "None",
+    "affected_part": "Trunk",
+    "symptoms": [
+      "Healthy trunk",
+      "No cracks or bleeding"
+    ],
+    "organic": [
+      "Maintain proper nutrition"
+    ],
+    "chemical": [
+      "No treatment required"
+    ],
+    "prevention": [
+      "Avoid mechanical injuries"
+    ],
+    "tips": [
+      "Inspect trunk monthly"
+    ]
+  },
+
+  "healthy_foot": {
+    "status": "Healthy",
+    "severity": "None",
+    "affected_part": "Base",
+    "symptoms": [
+      "Healthy stem base",
+      "No fungal growth"
+    ],
+    "organic": [
+      "Keep field clean"
+    ],
+    "chemical": [
+      "No treatment required"
+    ],
+    "prevention": [
+      "Prevent water stagnation"
+    ],
+    "tips": [
+      "Maintain drainage"
+    ]
+  },
+
+  "yellow leaf disease": {
+    "status": "Disease Detected",
+    "severity": "Moderate",
+    "affected_part": "Leaf",
+    "symptoms": [
+      "Yellow leaves",
+      "Leaf discoloration",
+      "Reduced growth"
+    ],
+    "organic": [
+      "Apply neem oil spray",
+      "Use vermicompost",
+      "Improve soil nutrition"
+    ],
+    "chemical": [
+      "Copper fungicide as recommended"
+    ],
+    "prevention": [
+      "Maintain balanced nutrients",
+      "Remove infected leaves",
+      "Avoid overwatering"
+    ],
+    "tips": [
+      "Monitor nearby plants regularly"
+    ]
+  },
+
+  "bud borer": {
+    "status": "Disease Detected",
+    "severity": "High",
+    "affected_part": "Bud",
+    "symptoms": [
+      "Small holes in spindle",
+      "Dry central shoot",
+      "Poor growth"
+    ],
+    "organic": [
+      "Neem oil spray",
+      "Remove damaged buds"
+    ],
+    "chemical": [
+      "Recommended insecticide"
+    ],
+    "prevention": [
+      "Regular field inspection",
+      "Destroy infected plant parts"
+    ],
+    "tips": [
+      "Monitor young palms frequently"
+    ]
+  },
+
+  "stem cracking": {
+    "status": "Disease Detected",
+    "severity": "High",
+    "affected_part": "Stem",
+    "symptoms": [
+      "Visible cracks",
+      "Stem weakness"
+    ],
+    "organic": [
+      "Apply organic manure"
+    ],
+    "chemical": [
+      "Copper-based fungicide"
+    ],
+    "prevention": [
+      "Avoid excess irrigation"
+    ],
+    "tips": [
+      "Inspect stems regularly"
+    ]
+  },
+
+  "Stem_bleeding": {
+    "status": "Disease Detected",
+    "severity": "High",
+    "affected_part": "Trunk",
+    "symptoms": [
+      "Dark brown liquid oozing",
+      "Trunk decay"
+    ],
+    "organic": [
+      "Improve drainage"
+    ],
+    "chemical": [
+      "Bordeaux paste"
+    ],
+    "prevention": [
+      "Avoid injuries",
+      "Remove infected tissue"
+    ],
+    "tips": [
+      "Treat early to prevent spread"
+    ]
+  },
+
+  "Mahali_Koleroga": {
+    "status": "Disease Detected",
+    "severity": "Severe",
+    "affected_part": "Fruit and Leaves",
+    "symptoms": [
+      "Fruit rotting",
+      "Black lesions",
+      "Leaf infection"
+    ],
+    "organic": [
+      "Improve field sanitation"
+    ],
+    "chemical": [
+      "Copper oxychloride spray"
+    ],
+    "prevention": [
+      "Ensure proper spacing",
+      "Reduce humidity"
+    ],
+    "tips": [
+      "Spray before monsoon season"
+    ]
+  }
+}
